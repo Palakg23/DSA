@@ -1,0 +1,36 @@
+//FActorial of n number 
+
+//Method 1 : Using Recursion
+
+#include <iostream>
+using namespace std;
+
+int rfac(int n)
+{
+    if(n==0)
+    return 1;
+    else
+    return rfac(n-1)*n;
+}
+
+//Method 2 : Using loop
+
+int lfac(int n)
+{
+    int fact=1;
+    for(int i=1;i<=n;i++)
+    fact*=i;
+    return fact;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of N to find factorial :\n";
+    cin>>n;
+    cout<<"Factorial of N :\n";
+    cout<<n<<"! = "<<rfac(n)<<endl;
+     cout<<n<<"! = "<<lfac(n);
+
+    return 0;
+}
