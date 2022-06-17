@@ -1,0 +1,47 @@
+//Sum of first n natural number 
+
+#include <iostream>
+using namespace std;
+
+//Method 1 : Using Formula
+int fsum(int n)
+{
+    return (n*(n+1))/2;
+    
+    //Time Complexity and Space  - O(1)
+}
+
+
+//Method 2 : USing REcursion
+int  rsum (int n)
+{
+    if (n==0)
+    return 0;
+    else
+    return rsum(n-1)+n;
+    
+    //Time and space complexity - O(n)
+}
+
+
+//Method 3: Using loop
+int lsum (int n)
+{
+    int sum=0;
+    for(int i=1;i<=n;i++)
+    sum+=i;
+    return sum;
+    
+    //Time complexity - O(n);
+    //Space compleixty - O(1)
+}
+
+int main()
+{
+    int n;
+    cout<<"Ener the value of N :\n";
+    cin>>n;
+    cout<<"Sum of first n natural number :\n"<<fsum(n)<<endl;
+    cout<<"Sum of first n natural number :\n"<<rsum(n)<<endl;
+    cout<<"Sum of first n natural number :\n"<<lsum(n)<<endl;
+}
